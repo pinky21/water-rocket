@@ -4,6 +4,12 @@ Simple project solving the differtial equations for a water rocket using a Cash-
 ## Theory
 
 ### A Simplistic Model of a Water Rocket
+
+In the following, we assume a cylindrical rocket with the cross-section area $A_{rocket}$, the nozzle opening area $A_{exaust}$. The rocket has the hight $H_{rocket}$. The rocket can be filled with water and the filling level is counted from the bottom of the rocket and is a function of time $h_{water}(t)$. Hence, the air volume in the rocket can simply be calculated as 
+```math
+V_{air}(t)=A_{rocket}(H_{rocket}-h_{water}(t))
+```
+
 The equation of motion for the rocket, assuming all forces are directed along the z-axis:
 ```math
 F_{rocket} = F_{trust} + F_{gravitation} + F_{drag},
@@ -30,9 +36,9 @@ p_{water}+\frac{1}{2}\rho_{water} v_{sink}^2=p_{ambient} + \frac{1}{2}\rho_{wate
 ```
 where $v_{sink}$ is the sinking velocity of the water in the bottle and $v_{exaust}$ the exaust velocity of the water at the nozzle. Here, we assume water to be incompressible ($\rho_{water} = const$) and neglect the hydrostatic pressure of the system. Further, we assume that the pressue at the nozze is equal to the ambient air pressue. Here, we introduced two further unknown, $v_{sink}$ and $p_{water}$. To find a closing relation for $v_{sink}$, the mass conservation can be applied:
 ```math
-v_{sink}A_{rocket}=v_{exaust}A_{nozzle},
+v_{sink}A_{rocket}=v_{exaust}A_{exaust},
 ```
-where $A_{nozzle}$ is the cross sectional area of the nozzle opening. To determine the water pressure $p_{water}$, we assume that the water pressure is in thermodynamic equilibrium with the pressurized air, so that $p_{water}=p_{air}$ holds.
+where $A_{exaust}$ is the cross sectional area of the nozzle opening. To determine the water pressure $p_{water}$, we assume that the water pressure is in thermodynamic equilibrium with the pressurized air, so that $p_{water}=p_{air}$ holds.
 
 However, with sinking water level in the bottle, also the air pressure is lowering. To relate the air pressure at time $t$ to the initial air pressure at time $t=0$, we assume a polytropic process with the polytropic index $\gamma$:
 ```math
