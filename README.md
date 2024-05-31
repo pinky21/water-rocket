@@ -105,10 +105,12 @@ The mass of the rocket containing no water is given as $m_{rocket} = m_{hull}+m_
 ```
 Recalling the integral version of the continuity equation, $\int_V \frac{\partial\rho}{\partial t} dV = \int_S \rho \mathbf{v} \mathbf{n} dS$, we find an expression for the derivative of the air density:
 ```math
-\frac{d\rho_{air}}{dt}V_{rocket}= \rho_{air}v_{expel}A_{expel}
+V_{rocket}\frac{d\rho_{air}}{dt}= \rho_{air}v_{expel}A_{expel}
 ```
-
-
+Similar as before, we use the energy consevation (Bernoulli) to relate the pressure to the expelling velocity
+```math
+p_{air}=p_{ambient}+\frac{1}{2}\rho_{air}v_{expel}^2
+```
 
 
 
