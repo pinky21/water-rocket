@@ -24,6 +24,8 @@ While the mass of the rocket hull is constant over time, the mass of the water i
 ```math
 p_{water}+\frac{1}{2}\rho_{water} v_{sink}^2=p_{ambient} + \frac{1}{2}\rho_{water} v_{exaust}^2
 ```
-where $v_{sink}$ is the sink velocity of the water in the bottle and v_{exaust} the exaust velocity of the water at the nozzle. Here, we assume water to be incompressible and neglect the hydrostatic pressure of the system.
+where $v_{sink}$ is the sink velocity of the water in the bottle and $v_{exaust}$ the exaust velocity of the water at the nozzle. Here, we assume water to be incompressible and neglect the hydrostatic pressure of the system. Further, we assume that the pressue at the nozze is ambient air pressue.
+
+
 
 
