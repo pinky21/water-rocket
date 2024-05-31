@@ -60,13 +60,13 @@ p_{air}(t)V_{air}^{\gamma}(t) = p_{air}(0)V_{air}^{\gamma}(0)
 ```
 
 Combining all these relations, we obtain a set of equations for the rocket during the time when the expelling water is contributing to the thrust. However, two conditions must be met for the water thrust:
-- p_{water}(t) > p_{ambient}
-- h_{water}(t) > 0
+- $p_{water}(t) > p_{ambient}$
+- $h_{water}(t) > 0$
 
 If these two conditions are not fullfilled anymore, the water-thrust phase can be considered over.
 The Bernoulli equation together with the mass conservation leads to an expression for the expelling water velocity:
 ```math
-v_{exaust}(t) = \sqrt{\frac{2}{\rho_{water}}\frac{p_{ambient} - p_{water}(t)}{1. - A_{exaust}^2 / A_{rocket}^2} }
+v_{exaust}(t) = \sqrt{\frac{2}{\rho_{water}}\frac{p_{ambient} - p_{water}(t)}{1 - \frac{A_{exaust}^2}{A_{rocket}^2}} }
 ```
 
 
