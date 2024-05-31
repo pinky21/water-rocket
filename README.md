@@ -103,7 +103,7 @@ The mass of the rocket containing no water is given as $m_{rocket} = m_{hull}+m_
 ```math
 \frac{dm_{air}}{dt} = \frac{d}{dt} (V_{air}\rho_{air})=V_{rocket}\frac{d\rho_{air}}{dt} 
 ```
-Recalling the integral version of the continuity equation, $\int_V \frac{\partial\rho}{\partial t} dV = \int_S \rho v n dS$
+Recalling the integral version of the continuity equation, $\int_V \frac{\partial\rho}{\partial t} dV = \int_S \rho \mathbf{v} n dS$
 
 
 
