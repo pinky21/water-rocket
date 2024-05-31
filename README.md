@@ -48,7 +48,7 @@ To relate the water pressure in the bottle to the pressure at the nozzle, the Be
 ```math
 p_{water}+\frac{1}{2}\rho_{water} v_{sink}^2=p_{ambient} + \frac{1}{2}\rho_{water} v_{expell}^2
 ```
-where $v_{sink}$ is the sinking velocity of the water in the bottle and $v_{expell}$ the expell velocity of the water at the nozzle. Here, we assume water to be incompressible ($\rho_{water} = const$) and neglect the hydrostatic pressure of the system. Further, we assume that the pressue at the nozze is equal to the ambient air pressue. Above, we introduced two further unknown, $v_{sink}$ and $p_{water}$. To find a closing relation for $v_{sink}$, the mass conservation is applied:
+where $v_{sink}$ is the sinking velocity of the water in the bottle and $v_{expell}$ the expell velocity of the water at the nozzle. Here, we assume water to be incompressible ($\rho_{water} = const$) and neglect the hydrostatic pressure of the system. Further, we assume that the pressue at the nozzle is equal to the ambient air pressue. Above, we introduced two further unknown, $v_{sink}$ and $p_{water}$. To find a closing relation for $v_{sink}$, the mass conservation is applied:
 ```math
 v_{sink}A_{rocket}=v_{expell}A_{expell}.
 ```
@@ -72,7 +72,7 @@ where
 ```math
 p_{water}(t) = p_{air}(0)\left(\frac{l_{rocket}-h_{water}(0)}{l_{rocket}-h_{water}(t)}\right)^\gamma
 ```
-
+Having this expression we can write the equations of motions:
 ```math
 \frac{dv_{rocket}}{dt} = A_{expell} \rho_{water} \frac{v_{expell}^2(t)}{m_{rocket}(t)} - g - \frac{1}{2} \frac{\rho_{ambient}}{m_{rocket}(t)} v_{rocket}^2(t) C_D A_{rocket}\frac{v_{rocket}(t)}{|v_{rocket}(t)|}.
 ```
