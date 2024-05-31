@@ -132,12 +132,12 @@ and a differential equation for the air density
 
 Hence, the calculation scheme is the following:
 
-1. Only once, when the condition $h_{water} < 0$ is met first, calculate \rho_{air}(t_0) at that point in time $t_0$.  
+1. Only once, when the condition $h_{water} < 0$ is met first, calculate $\rho_{air}(t_0)$ at that point in time $t_0$.  
 2. Calculate the rocket's mass, $m_{rocket}(t)=m_{hull}+\rho_{air}(t)V_{rocket}$
 3. Calculate the expelling velocity, $v_{expel}(t)$
 4. Calculate the acceleration of the rocket, $\frac{dv_{rocket}}{dt}$
 5. Calculate the velocity of the rocket, $\frac{dh_{rocket}}{dt}$
-6. Calculate the sinking velocity of the water in the rocket, $\frac{dh_{water}}{dt}$
+6. Calculate the air density change, $\frac{\rho_{air}}{dt}$
 
 
 
