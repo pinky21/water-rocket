@@ -77,6 +77,12 @@ p_{water}(t) = p_{air}(0)\left(\frac{H_{rocket}-h_{water}(0)}{H_{rocket}-h_{wate
 \frac{dv_{rocket}}{dt} = A_{exaust} \rho_{water} \frac{v_{exaust}^2}{m_{rocket}} - g - \frac{1}{2} \frac{\rho_{ambient}}{m_{rocket}} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}.
 ```
 
+```math
+\frac{dh_{rocket}}{dt} = v_{rocket}(t)
+```
+```math
+\frac{dh_{water}}{dt} = v_{sink}(t) = \frac{A_{exaust}}{A_{rocket}} v_{exaust}
+```
 
 
 
