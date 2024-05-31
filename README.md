@@ -93,6 +93,8 @@ Hence, the calculation scheme is the following:
 5. Calculate the velocity of the rocket, $\frac{dh_{rocket}}{dt}$
 6. Calculate the sinking velocity of the water in the rocket, $\frac{dh_{water}}{dt}$
 
+The calculations above are repeated until the conditions $p_{air}(t) > p_{ambient}$ or $h_{water}(t) > 0$ are violated.
+
 #### Air Thrust ($p_{air}(t) > p_{ambient}$, $h_{water}(t) = 0$)
 
 If the water level is zero either because all water is already expelled or because simply no water was filled into the rocket, we can still have a thrust force due to the higher air pressure inside the rocket than outside. Hence the equation of motion is the same as in the case above, only the equations for the medium in the rocket are somewhat different.
@@ -139,7 +141,7 @@ Hence, the calculation scheme is the following:
 5. Calculate the velocity of the rocket, $\frac{dh_{rocket}}{dt}$
 6. Calculate the air density change, $\frac{d\rho_{air}}{dt}$
 
-
+The calculations above are repeated until the condition $p_{air}(t) > p_{ambient}$ is violated.
 
 
 
