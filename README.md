@@ -91,8 +91,8 @@ Hence, the calculation scheme is the following:
 2. Calculate the pressure in the rocket $p_{water}(t)$
 3. Calculate the expelling velocity $v_{expell}(t)$
 4. Calculate the acceleration of the rocket $\frac{dv_{rocket}}{dt}$
-5. Calculate the velocity of the rocket \frac{dh_{rocket}}{dt}
-6. Calculate the sinking velocity of the water in the rocket \frac{dh_{water}}{dt} 
+5. Calculate the velocity of the rocket $\frac{dh_{rocket}}{dt}$
+6. Calculate the sinking velocity of the water in the rocket $\frac{dh_{water}}{dt}$
 
 
 
