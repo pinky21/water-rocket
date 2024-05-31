@@ -74,7 +74,7 @@ p_{water}(t) = p_{air}(0)\left(\frac{H_{rocket}-h_{water}(0)}{H_{rocket}-h_{wate
 ```
 
 ```math
-\frac{dv_{rocket}}{dt} = \frac{v_{exaust}}{m_{rocket}} \frac{A_{rocket}\rho_{water}dh_{water}}{dt} - g - \frac{1}{2m_{rocket}} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}.
+\frac{dv_{rocket}}{dt} = A_{exaust} \rho_{water} \frac{v_{exaust}^2}{m_{rocket}} - g - \frac{1}{2m_{rocket}} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}.
 ```
 
 
