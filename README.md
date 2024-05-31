@@ -111,7 +111,10 @@ Similar as before, we use the energy consevation (Bernoulli) to relate the press
 ```math
 p_{air}=p_{ambient}+\frac{1}{2}\rho_{air}v_{expel}^2
 ```
-
+leading to 
+```math
+v_{expel}(t) = \sqrt{\frac{2}{\rho_{air}}(p_{air}(t)-p_{ambient}) }
+```
 
 
 
