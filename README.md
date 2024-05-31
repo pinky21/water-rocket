@@ -8,9 +8,9 @@ The equation of motion for the rocket, assuming all forces are directed along th
 ```math
 F_{rocket} = F_{trust} + F_{gravitation} + F_{drag},
 ```
-where $F_{rocket}=m_{rocket}\frac{dv_{rocket}}{dt}$, $F_{thrust}=v_{exaust}\frac{dm_{rocket}}{dt}$, $F_{gravitation}=-m_{rocket}g$, and $F_{drag}=-\frac{1}{2} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\text{sgn}(v_{rocket})$, assuming quadratic drag for objects at high Reynolds numbers. Further, since relistically for our simple setup, we do not expect the rocket to fly higher than a few meters, we can safly assume the gravitational acceleration to be constant. Inserting these relations obove, we obtain:
+where $F_{rocket}=m_{rocket}\frac{dv_{rocket}}{dt}$, $F_{thrust}=v_{exaust}\frac{dm_{rocket}}{dt}$, $F_{gravitation}=-m_{rocket}g$, and $F_{drag}=-\frac{1}{2} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}$, assuming quadratic drag for objects at high Reynolds numbers. Further, since relistically for our simple setup, we do not expect the rocket to fly higher than a few meters, we can safly assume the gravitational acceleration to be constant. Inserting these relations obove, we obtain:
 ```math
-m_{rocket}\frac{dv_{rocket}}{dt} = v_{exaust}\frac{dm_{rocket}}{dt} - m_{rocket}g - \frac{1}{2} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\text{sgn}(v_{rocket}).
+m_{rocket}\frac{dv_{rocket}}{dt} = v_{exaust}\frac{dm_{rocket}}{dt} - m_{rocket}g - \frac{1}{2} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}.
 ```
 The mass of the rocket consists of several contributions, $m_{rocket} = m_{hull}+m_{water}+m_{air}\approx m_{rocket} = m_{hull}+m_{water}$, where we neglect for simplicity the contribution from the pressurized air, which should be in the order of a few grams for a 1l bottle and pressures up to five bars.  
 
