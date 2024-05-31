@@ -128,6 +128,7 @@ v_{expel}(t) = \sqrt{\frac{2}{\rho_{air}(t)}(\rho_{air}(t)R_{spec,air}T_{air}-p_
 and a differential equation for the air density
 ```math
 \frac{d\rho_{air}}{dt}= \rho_{air}v_{expel}\frac{A_{expel}}{A_{rocket}l_{rocket}}
+```
 
 Hence, the calculation scheme is the following:
 0. Only once, when the condition $h_{water} < 0$ is met first, calculate \rho_{air}(t_0) at that point in time $t_0$.  
@@ -138,7 +139,7 @@ Hence, the calculation scheme is the following:
 5. Calculate the sinking velocity of the water in the rocket, $\frac{dh_{water}}{dt}$
 
 
-```
+
 
 
 
