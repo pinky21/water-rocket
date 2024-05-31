@@ -31,9 +31,12 @@ Above, we assume quadratic drag for objects at high Reynolds numbers and since f
 ```math
 m_{rocket}\frac{dv_{rocket}}{dt} = v_{exaust}\frac{dm_{rocket}}{dt} - m_{rocket}g - \frac{1}{2} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}.
 ```
-The mass of the rocket consists of several contributions, $m_{rocket} = m_{hull}+m_{water}+m_{air}\approx m_{rocket} = m_{hull}+m_{water}$, where we neglect for simplicity the contribution from the pressurized air, which should be in the order of a few grams for a 1l bottle and pressures up to five bars.  
+The mass of the rocket consists of several contributions, $m_{rocket} = m_{hull}+m_{water}+m_{air}\approx m_{rocket} = m_{hull}+m_{water}$, where we neglect for simplicity the contribution from the pressurized air, which should be in the order of a few grams for a 1l bottle and pressures up to five bars. While the mass of the rocket hull is constant over time, the mass of the water is a function of time and can be expressed by the water density and the filling level:
+```math
+m_{rocket} = \rho_{water}V_{water}=\rho_{water}A_{rocket}h_{water}.
+```
 
-While the mass of the rocket hull is constant over time, the mass of the water is a function of time. Further, also the exaust velocity is a function of time, since the pressure in the bottle will decrease as more water or air is expelled from the bottle. 
+Further, also the exaust velocity is a function of time, since the pressure in the bottle will decrease as more water or air is expelled from the bottle. 
 
 In summary, we have the the unknown variables $m_{water}$, $v_{rocket}$, $v_{exaust}$, and several known variables such as the area of the bottle $A_{rocket}$, the mass of the bottle $m_{hull}$, or the ambient air density $\rho_{ambient}$.
 
@@ -55,6 +58,8 @@ However, with sinking water level in the bottle, also the air pressure is loweri
 ```math
 p_{air}(t)V_{air}^{\gamma}(t) = p_{air}(0)V_{air}^{\gamma}(0)
 ```
+
+Combining all these relations, we obtain a set of differential equations
 
 
 
