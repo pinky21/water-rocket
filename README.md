@@ -86,7 +86,7 @@ m_{rocket}(t) = m_{hull}+ \rho_{water}A_{rocket}h_{water}(t)
 ```math
 \frac{dh_{water}}{dt} = -v_{sink} = -\frac{A_{exaust}}{A_{rocket}} v_{exaust}
 ```
-
+Hence, the calculation scheme is the following:
 
 
 
