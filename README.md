@@ -95,7 +95,16 @@ Hence, the calculation scheme is the following:
 
 #### Air Thrust ($p_{air}(t) > p_{ambient}$, $h_{water}(t) = 0$)
 
-If the water level is zero either because all water is already expelled or because simply no water was filled into the rocket, we can still have a thrust force due to the higher air pressure inside the rocket than outside. Hence the equation of motion is the same as in the case above, only the equations for the medium in the rocket are somewhat different. 
+If the water level is zero either because all water is already expelled or because simply no water was filled into the rocket, we can still have a thrust force due to the higher air pressure inside the rocket than outside. Hence the equation of motion is the same as in the case above, only the equations for the medium in the rocket are somewhat different.
+
+Recalling the thrust force, $F_{thrust}=-v_{expell}\frac{dm_{rocket}}{dt}$, we need an equation for the mass change of the rocket.
+
+The mass of the rocket containing no water is given as $m_{rocket} = m_{hull}+m_{air}$. The only time dependant mass is the $m_{air}$ which can be written as 
+```math
+\frac{m_{air}}{dt} = \frac{d}{dt} (V_{air}\rho_{air})=V_{rocket}\frac{d\rho_{air}}{dt} 
+```
+
+
 
 
 
