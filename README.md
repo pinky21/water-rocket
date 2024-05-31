@@ -20,15 +20,17 @@ m_{rocket}\frac{dv_{rocket}}{dt} = v_{exaust}\frac{dm_{rocket}}{dt} - m_{rocket}
 ```
 The mass of the rocket consists of several contributions, $m_{rocket} = m_{hull}+m_{water}+m_{air}\approx m_{rocket} = m_{hull}+m_{water}$, where we neglect for simplicity the contribution from the pressurized air, which should be in the order of a few grams for a 1l bottle and pressures up to five bars.  
 
-While the mass of the rocket hull is constant over time, the mass of the water is a function of time. Further, also the exaust velocity is a function of time, since the pressure in the bottle will decrase as more water or air is expelled from the bottle. 
+While the mass of the rocket hull is constant over time, the mass of the water is a function of time. Further, also the exaust velocity is a function of time, since the pressure in the bottle will decrease as more water or air is expelled from the bottle. 
 
-In summary, we have the the unknown variables $m_{water}$, $v_{rocket}$, $v_{exaust}$, and several geometrical variables such as the cross sectional area of the bottle $A_{rocket}$, the mass of the bottle $m_{hull}$, or the ambient air density $\rho_{ambient}$.
+In summary, we have the the unknown variables $m_{water}$, $v_{rocket}$, $v_{exaust}$, and several known variables such as the cross sectional area of the bottle $A_{rocket}$, the mass of the bottle $m_{hull}$, or the ambient air density $\rho_{ambient}$.
 
 To relate the water pressure in the bottle to the pressure at the nozze, the Bernoulli equation is applied:
 ```math
 p_{water}+\frac{1}{2}\rho_{water} v_{sink}^2=p_{ambient} + \frac{1}{2}\rho_{water} v_{exaust}^2
 ```
-where $v_{sink}$ is the sink velocity of the water in the bottle and $v_{exaust}$ the exaust velocity of the water at the nozzle. Here, we assume water to be incompressible and neglect the hydrostatic pressure of the system. Further, we assume that the pressue at the nozze is ambient air pressue.
+where $v_{sink}$ is the sink velocity of the water in the bottle and $v_{exaust}$ the exaust velocity of the water at the nozzle. Here, we assume water to be incompressible and neglect the hydrostatic pressure of the system. Further, we assume that the pressue at the nozze is equat to the ambient air pressue.
+
+
 
 
 
