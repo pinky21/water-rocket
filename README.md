@@ -8,4 +8,4 @@ The equation of motion for the rocket, assuming all forces are directed along th
 ```math
 F_{rocket} = F_{trust} + F_{gravitation} + F_{drag},
 ```
-where $\`F_{rocket}=m_{rocket}\frac{dv_{rocket}}{dt}\`$
+where $F_{rocket}=m_{rocket}\frac{dv_{rocket}}{dt}$
