@@ -12,9 +12,9 @@ where
 - $F_{rocket}=m_{rocket}\frac{dv_{rocket}}{dt}$,
 - $F_{thrust}=v_{exaust}\frac{dm_{rocket}}{dt}$,
 - $F_{gravitation}=-m_{rocket}g$,
-- $F_{drag}=-\frac{1}{2} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}$, assuming quadratic drag for objects at high Reynolds numbers.
+- $F_{drag}=-\frac{1}{2} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}$
 
-Since for our simple setup, we do not expect the rocket to fly higher than a few meters, we can safely assume the gravitational acceleration to be constant. Inserting these relations obove, we obtain:
+Above, we assume quadratic drag for objects at high Reynolds numbers and since for our simple setup, we do not expect the rocket to fly higher than a few meters, we can safely assume the gravitational acceleration to be constant. Inserting these relations obove, we obtain:
 ```math
 m_{rocket}\frac{dv_{rocket}}{dt} = v_{exaust}\frac{dm_{rocket}}{dt} - m_{rocket}g - \frac{1}{2} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}.
 ```
