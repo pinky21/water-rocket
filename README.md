@@ -101,7 +101,7 @@ Recalling the thrust force, $F_{thrust}=-v_{expell}\frac{dm_{rocket}}{dt}$, we n
 
 The mass of the rocket containing no water is given as $m_{rocket} = m_{hull}+m_{air}$. The only time dependant mass is the $m_{air}$ which can be written as 
 ```math
-\frac{m_{air}}{dt} = \frac{d}{dt} (V_{air}\rho_{air})=V_{rocket}\frac{d\rho_{air}}{dt} 
+\frac{dm_{air}}{dt} = \frac{d}{dt} (V_{air}\rho_{air})=V_{rocket}\frac{d\rho_{air}}{dt} 
 ```
 
 
