@@ -30,8 +30,9 @@ p_{water}+\frac{1}{2}\rho_{water} v_{sink}^2=p_{ambient} + \frac{1}{2}\rho_{wate
 ```
 where $v_{sink}$ is the sinking velocity of the water in the bottle and $v_{exaust}$ the exaust velocity of the water at the nozzle. Here, we assume water to be incompressible ($\rho_{water} = const$) and neglect the hydrostatic pressure of the system. Further, we assume that the pressue at the nozze is equal to the ambient air pressue. Here, we introduced a further unknown, $v_{sink}$. However, the mass conservation relates $v_{sink}$ to $v_{exaust}$
 ```math
-v_{sink}A_{rocket}=v_{exaust}A_{nozzle}
+v_{sink}A_{rocket}=v_{exaust}A_{nozzle},
 ```
+where $A_{nozzle}$ is the cross sectional area of the nozzle opening.
 
 Above, we introduced a new unknown variable $p_{water}$. To determine the water pressure, we assume that the water pressure is in thermodynamic equilibrium with the pressurized air, so that $p_{water}=p_{air}$ holds.
 
