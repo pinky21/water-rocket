@@ -86,12 +86,12 @@ m_{rocket}(t) = m_{hull}+ \rho_{water}A_{rocket}h_{water}(t)
 \frac{dh_{water}}{dt} = -v_{sink} = -\frac{A_{expel}}{A_{rocket}} v_{expel}
 ```
 Hence, the calculation scheme is the following:
-1. Calculate the rocket's mass $m_{rocket}(t)$
-2. Calculate the pressure in the rocket $p_{water}(t)$
-3. Calculate the expelling velocity $v_{expel}(t)$
-4. Calculate the acceleration of the rocket $\frac{dv_{rocket}}{dt}$
-5. Calculate the velocity of the rocket $\frac{dh_{rocket}}{dt}$
-6. Calculate the sinking velocity of the water in the rocket $\frac{dh_{water}}{dt}$
+1. Calculate the rocket's mass, $m_{rocket}(t)$
+2. Calculate the pressure in the rocket, $p_{water}(t)$
+3. Calculate the expelling velocity, $v_{expel}(t)$
+4. Calculate the acceleration of the rocket, $\frac{dv_{rocket}}{dt}$
+5. Calculate the velocity of the rocket, $\frac{dh_{rocket}}{dt}$
+6. Calculate the sinking velocity of the water in the rocket, $\frac{dh_{water}}{dt}$
 
 #### Air Thrust ($p_{air}(t) > p_{ambient}$, $h_{water}(t) = 0$)
 
@@ -117,7 +117,7 @@ v_{expel}(t) = \sqrt{\frac{2}{\rho_{air}(t)}(p_{air}(t)-p_{ambient}) }
 ```
 To find an equation relating the air pressure and the air density we assume in this case the air to be an ideal gas. The ideal gas equation of state can be written as:
 ```math
-p_{air}=\rho_{air}R_{air,spec}T_{air}
+p_{air}=\rho_{air}R_{spec,air}T_{air}
 ```
 
 
