@@ -59,17 +59,17 @@ p_{air}(t)V_{air}^{\gamma}(t) = p_{air}(0)V_{air}^{\gamma}(0)
 ```
 
 Combining all these relations, we obtain a set of equations for the rocket during the time when the expelling water is contributing to the thrust. However, two conditions must be met for the water thrust:
-- $p_{water}(t) > p_{ambient}$
+- $p_{air}(t) > p_{ambient}$
 - $h_{water}(t) > 0$
 
 If these two conditions are not fullfilled anymore, the water-thrust phase can be considered over.
 In the case those two conditions are fulfilled, the Bernoulli equation together with the mass conservation leads to an expression for the expelling water velocity:
 ```math
-v_{expel}(t) = \sqrt{\frac{2}{\rho_{water}}\frac{p_{water}(t)-p_{ambient}}{1 - \left(\frac{A_{expel}}{A_{rocket}}\right)^2} }
+v_{expel}(t) = \sqrt{\frac{2}{\rho_{water}}\frac{p_{air}(t)-p_{ambient}}{1 - \left(\frac{A_{expel}}{A_{rocket}}\right)^2} }
 ```
 where
 ```math
-p_{water}(t) = p_{air}(0)\left(\frac{l_{rocket}-h_{water}(0)}{l_{rocket}-h_{water}(t)}\right)^\gamma
+p_{air}(t) = p_{air}(0)\left(\frac{l_{rocket}-h_{water}(0)}{l_{rocket}-h_{water}(t)}\right)^\gamma
 ```
 Having this expression we can write the equations of motions:
 ```math
@@ -87,7 +87,7 @@ m_{rocket}(t) = m_{hull}+ \rho_{water}A_{rocket}h_{water}(t)
 ```
 Hence, the calculation scheme is the following:
 1. Calculate the rocket's mass, $m_{rocket}(t)$
-2. Calculate the pressure in the rocket, $p_{water}(t)$
+2. Calculate the pressure in the rocket, $p_{air}(t)$
 3. Calculate the expelling velocity, $v_{expel}(t)$
 4. Calculate the acceleration of the rocket, $\frac{dv_{rocket}}{dt}$
 5. Calculate the velocity of the rocket, $\frac{dh_{rocket}}{dt}$
