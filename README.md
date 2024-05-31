@@ -70,7 +70,7 @@ v_{exaust}(t) = \sqrt{\frac{2}{\rho_{water}}\frac{p_{water}(t)-p_{ambient}}{1 - 
 ```
 where
 ```math
-p_{water}(t) = p_{air}(0)\frac{H_{rocket}-h_{water}(0)}{H_{rocket}-h_{water}(t)}
+p_{water}(t) = p_{air}(0)\left(\frac{H_{rocket}-h_{water}(0)}{H_{rocket}-h_{water}(t)}\right)^\gamma
 ```
 
 ```math
