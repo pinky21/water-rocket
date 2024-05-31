@@ -22,8 +22,8 @@ The equation of motion for the rocket, assuming all forces are directed along th
 F_{rocket} = F_{trust} + F_{gravitation} + F_{drag},
 ```
 where 
-- $F_{rocket}=-m_{rocket}\frac{dv_{rocket}}{dt}$,
-- $F_{thrust}=v_{expell}\frac{dm_{rocket}}{dt}$,
+- $F_{rocket}=m_{rocket}\frac{dv_{rocket}}{dt}$,
+- $F_{thrust}=-v_{expell}\frac{dm_{rocket}}{dt}$,
 - $F_{gravitation}=-m_{rocket}g$,
 - $F_{drag}=-\frac{1}{2} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}$
 
