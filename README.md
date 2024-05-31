@@ -64,7 +64,7 @@ Combining all these relations, we obtain a set of equations for the rocket durin
 - $h_{water}(t) > 0$
 
 If these two conditions are not fullfilled anymore, the water-thrust phase can be considered over.
-The Bernoulli equation together with the mass conservation leads to an expression for the expelling water velocity:
+In the case those two conditions are fulfilled, the Bernoulli equation together with the mass conservation leads to an expression for the expelling water velocity:
 ```math
 v_{exaust}(t) = \sqrt{\frac{2}{\rho_{water}}\frac{p_{water}(t)-p_{ambient}}{1 - \left(\frac{A_{exaust}}{A_{rocket}}\right)^2} }
 ```
