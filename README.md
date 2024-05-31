@@ -5,10 +5,14 @@ Simple project solving the differtial equations for a water rocket using a Cash-
 
 ### A Simplistic Model of a Water Rocket
 
+#### Geometry
+
 In the following, we assume a cylindrical rocket with the cross-section area $A_{rocket}$, the nozzle opening area $A_{exaust}$. The rocket has the hight $H_{rocket}$. The rocket can be filled with water and the filling level is counted from the bottom of the rocket and is a function of time $h_{water}(t)$. Hence, the air volume in the rocket can simply be calculated as 
 ```math
 V_{air}(t)=A_{rocket}(H_{rocket}-h_{water}(t))
 ```
+
+#### Equation of Motion
 
 The equation of motion for the rocket, assuming all forces are directed along the z-axis:
 ```math
