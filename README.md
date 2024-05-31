@@ -28,13 +28,11 @@ To relate the water pressure in the bottle to the pressure at the nozze, the Ber
 ```math
 p_{water}+\frac{1}{2}\rho_{water} v_{sink}^2=p_{ambient} + \frac{1}{2}\rho_{water} v_{exaust}^2
 ```
-where $v_{sink}$ is the sinking velocity of the water in the bottle and $v_{exaust}$ the exaust velocity of the water at the nozzle. Here, we assume water to be incompressible ($\rho_{water} = const$) and neglect the hydrostatic pressure of the system. Further, we assume that the pressue at the nozze is equal to the ambient air pressue. Here, we introduced a further unknown, $v_{sink}$. However, the mass conservation relates $v_{sink}$ to $v_{exaust}$
+where $v_{sink}$ is the sinking velocity of the water in the bottle and $v_{exaust}$ the exaust velocity of the water at the nozzle. Here, we assume water to be incompressible ($\rho_{water} = const$) and neglect the hydrostatic pressure of the system. Further, we assume that the pressue at the nozze is equal to the ambient air pressue. Here, we introduced two further unknown, $v_{sink}$ and $p_{water}$. To find a closing relation for $v_{sink}$, the mass conservation can be applied:
 ```math
 v_{sink}A_{rocket}=v_{exaust}A_{nozzle},
 ```
-where $A_{nozzle}$ is the cross sectional area of the nozzle opening.
-
-Above, we introduced a new unknown variable $p_{water}$. To determine the water pressure, we assume that the water pressure is in thermodynamic equilibrium with the pressurized air, so that $p_{water}=p_{air}$ holds.
+where $A_{nozzle}$ is the cross sectional area of the nozzle opening. To determine the water pressure $p_{water}$, we assume that the water pressure is in thermodynamic equilibrium with the pressurized air, so that $p_{water}=p_{air}$ holds.
 
 However, with sinking water level in the bottle, also the air pressure is lowering. To relate the air pressure at time $t$ to the initial air pressure at time $t=0$, we assume a polytropic process with the polytropic index $\gamma$:
 ```math
