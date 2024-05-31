@@ -59,7 +59,18 @@ However, with sinking water level in the bottle, also the air pressure is loweri
 p_{air}(t)V_{air}^{\gamma}(t) = p_{air}(0)V_{air}^{\gamma}(0)
 ```
 
-Combining all these relations, we obtain a set of differential equations
+Combining all these relations, we obtain a set of equations for the rocket during the time when the expelling water is contributing to the thrust. However, two conditions must be met for the water thrust:
+- p_{water}(t) > p_{ambient}
+- h_{water}(t) > 0
+
+If these two conditions are not fullfilled anymore, the water-thrust phase can be considered over.
+The Bernoulli equation together with the mass conservation leads to an expression for the expelling water velocity:
+```math
+v_{exaust}(t) = \sqrt{ }
+```
+
+
+
 
 
 
