@@ -34,7 +34,7 @@ Above, we introduced a new unknown variable $p_{water}$. To determine the water 
 
 However, with sinking water level in the bottle, also the air pressure is lowering. To relate the air pressure at time $t$ to the initial air pressure at time $t=0$, we assume a polytropic process with the polytropic index $\gamma$:
 ```math
-p_{air}(t)V_{air}^{gamma}(t) = p_{air}(0)V_{air}^{\gamma}(0)
+p_{air}(t)V_{air}^{\gamma}(t) = p_{air}(0)V_{air}^{\gamma}(0)
 ```
 
 
