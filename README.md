@@ -137,7 +137,7 @@ Hence, the calculation scheme is the following:
 3. Calculate the expelling velocity, $v_{expel}(t)$
 4. Calculate the acceleration of the rocket, $\frac{dv_{rocket}}{dt}$
 5. Calculate the velocity of the rocket, $\frac{dh_{rocket}}{dt}$
-6. Calculate the air density change, $\frac{\rho_{air}}{dt}$
+6. Calculate the air density change, $\frac{d\rho_{air}}{dt}$
 
 
 
