@@ -121,6 +121,14 @@ p_{air}=\rho_{air}R_{spec,air}T_{air},
 ```
 where $R_{spec,air}$ is the specific gas constant of air and $T_{air}$ the air temperature, which we assume to be equal the ambient temperature $T_{air}=T_{ambient}$.
 
+In sumary, we can again obtain an expression for the expelling velocity:
+```math
+v_{expel}(t) = \sqrt{\frac{2}{\rho_{air}(t)}(\rho_{air}(t)R_{spec,air}T_{air}-p_{ambient}) }
+```
+and a differential equation for the air density
+```math
+\frac{d\rho_{air}}{dt}= \rho_{air}v_{expel}\frac{A_{expel}}{A_{rocket}l_{rocket}}
+```
 
 
 
