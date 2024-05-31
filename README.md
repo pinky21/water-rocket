@@ -115,6 +115,11 @@ leading to
 ```math
 v_{expel}(t) = \sqrt{\frac{2}{\rho_{air}(t)}(p_{air}(t)-p_{ambient}) }
 ```
+To find an equation relating the air pressure and the air density we assume in this case the air to be an ideal gas. The ideal gas equation of state can be written as:
+```math
+p_{air}=\rho_{air}R_{air,spec}T_{air}
+```
+
 
 
 
