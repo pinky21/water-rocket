@@ -4,9 +4,7 @@ Simple project solving the differtial equations for a water rocket using a Cash-
 ## Theory
 
 ### A Simplistic Model of a Water Rocket
-
+The equation of motion for the rocket assuming all forces are directed along the z-axis:
 ```math
-\left(
-
-\right)
+F_{rocket} = F_{trust} + F_{gravitation} + F_{drag}
 ```
