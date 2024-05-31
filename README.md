@@ -33,7 +33,7 @@ m_{rocket}\frac{dv_{rocket}}{dt} = v_{exaust}\frac{dm_{rocket}}{dt} - m_{rocket}
 ```
 The mass of the rocket consists of several contributions, $m_{rocket} = m_{hull}+m_{water}+m_{air}\approx m_{rocket} = m_{hull}+m_{water}$, where we neglect for simplicity the contribution from the pressurized air, which should be in the order of a few grams for a 1l bottle and pressures up to five bars. While the mass of the rocket hull is constant over time, the mass of the water is a function of time and can be expressed by the water density and the filling level:
 ```math
-m_{rocket} = \rho_{water}V_{water}=\rho_{water}A_{rocket}h_{water}.
+m_{water} = \rho_{water}V_{water}=\rho_{water}A_{rocket}h_{water}.
 ```
 
 Further, also the exaust velocity is a function of time, since the pressure in the bottle will decrease as more water or air is expelled from the bottle. 
