@@ -7,12 +7,12 @@ Simple project solving the differtial equations for a water rocket using a Cash-
 
 #### Geometry
 
-In the following, we assume a cylindrical rocket with the cross-section area $A_{rocket}$, the nozzle opening area $A_{expel}$. The rocket has the hight $H_{rocket}$. The rocket can be filled with water and the filling level is counted from the bottom of the rocket and is a function of time $h_{water}(t)$. Hence, the water and air volume in the rocket can simply be calculated as 
+In the following, we assume a cylindrical rocket with the cross-section area $A_{rocket}$, the nozzle opening area $A_{expel}$. The rocket has the length $l_{rocket}$. The rocket can be filled with water and the filling level is counted from the bottom of the rocket and is a function of time $h_{water}(t)$. Hence, the water and air volume in the rocket can simply be calculated as 
 ```math
 V_{water}(t)=A_{rocket}h_{water}(t)
 ```
 ```math
-V_{air}(t)=A_{rocket}(H_{rocket}-h_{water}(t))
+V_{air}(t)=A_{rocket}(l_{rocket}-h_{water}(t))
 ```
 
 #### Equation of Motion
@@ -70,7 +70,7 @@ v_{expell}(t) = \sqrt{\frac{2}{\rho_{water}}\frac{p_{water}(t)-p_{ambient}}{1 - 
 ```
 where
 ```math
-p_{water}(t) = p_{air}(0)\left(\frac{H_{rocket}-h_{water}(0)}{H_{rocket}-h_{water}(t)}\right)^\gamma
+p_{water}(t) = p_{air}(0)\left(\frac{l_{rocket}-h_{water}(0)}{l_{rocket}-h_{water}(t)}\right)^\gamma
 ```
 
 ```math
