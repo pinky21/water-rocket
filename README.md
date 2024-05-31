@@ -5,6 +5,8 @@ Simple project solving the differtial equations for a water rocket using a Cash-
 
 ### A Simplistic Model of a Water Rocket
 
-$$\left(
+```math
+\left(
 
-\right)$$
+\right)
+```
