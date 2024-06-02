@@ -21,7 +21,7 @@ Newton's second law states that in the absence of external forces, the total mom
 ```math
 \frac{dP}{dt} = 0
 ```
-We can split the total momentum into two components, the momentum of the rocket system $P_{rocket}$ and the momentum of the water which left the rocket $P_{water}$. Hence the equation above can be written as
+We can split the total momentum into two components, the momentum of the rocket system $P_{rocket}$ and the momentum of the water immediately after leaving the rocket $P_{water}$. Hence the equation above can be written as
 ```math
 \frac{dP_{rocket}}{dt}+\frac{dP_{water}}{dt} = 0
 ```
@@ -34,7 +34,11 @@ The momentum of the water system inceases as the rocket is loosing its mass and 
 ```math
 \frac{dP_{water}}{dt} = \frac{dm_{rocket}}{dt}(v_{expel}-v_{rocket})
 ```
-Combining those two 
+Combining those two eqautions results in the well-known rocket equation
+```math
+\frac{dm_{rocket}}{dt}v_{rocket}+m_{rocket}\frac{dv_{rocket}}{dt} = \frac{dm_{rocket}}{dt}(v_{expel}-v_{rocket})
+```
+
 
 The equation of motion for the rocket, assuming all forces are directed along the z-axis:
 ```math
