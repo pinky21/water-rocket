@@ -19,11 +19,11 @@ V_{air}(t)=A_{rocket}(l_{rocket}-h_{water}(t))
 
 Newton's second law states that in the absence of external forces, the total momentum is conserved:
 ```math
-\frac{dP}{dt} = 0
+\frac{d\mathbf{P}}{dt} = 0
 ```
-We can split the total momentum into two components, the momentum of the rocket system $P_{rocket}$ and the momentum of the water which left the rocket $P_{water}$. Hence the equation above can be written as
+We can split the total momentum into two components, the momentum of the rocket system $\mathbf{P}_{rocket}$ and the momentum of the water which left the rocket $\mathbf{P}_{water}$. Hence the equation above can be written as
 ```math
-\frac{dP_{rocket}}{dt}+\frac{dP_{water}}{dt} = 0
+\frac{d\mathbf{P}_{rocket}}{dt}+\frac{d\mathbf{P}_{water}}{dt} = 0
 ```
 
 
