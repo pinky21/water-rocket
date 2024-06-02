@@ -36,7 +36,7 @@ The momentum of the water system inceases as the rocket is loosing its mass and 
 ```
 Combining those two eqautions results in the well-known rocket equation
 ```math
-\frac{dm_{rocket}}{dt}v_{rocket}+m_{rocket}\frac{dv_{rocket}}{dt} = \frac{dm_{rocket}}{dt}(v_{expel}-v_{rocket})
+\frac{dm_{rocket}}{dt}v_{rocket}+m_{rocket}\frac{dv_{rocket}}{dt} + \frac{dm_{rocket}}{dt}(v_{expel}-v_{rocket})=0
 ```
 
 
