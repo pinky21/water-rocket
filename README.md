@@ -25,11 +25,13 @@ We can split the total momentum into two components, the momentum of the rocket 
 ```math
 \frac{dP_{rocket}}{dt}+\frac{dP_{water}}{dt} = 0
 ```
-In the labrotory frame, the momentum of the rocket system can be written as 
+In the labrotory frame, the time derivative of the momentum of the rocket system can be written as 
 ```math
-P_{rocket} = m_{rocket}(t)v_{rocket}(t)
+\frac{dP_{rocket}}{dt} = \frac{dm_{rocket}}{dt}v_{rocket}+m_{rocket}\frac{dv_{rocket}}{dt}
 ```
-
+```math
+P_{water} = m_{rocket}(t)v_{rocket}(t)
+```
 
 The equation of motion for the rocket, assuming all forces are directed along the z-axis:
 ```math
