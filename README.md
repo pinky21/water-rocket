@@ -165,7 +165,12 @@ Hence, the calculation scheme is the following:
 
 The calculations above are repeated until the condition $p_{air}(t) > p_{ambient}$ is violated.
 
+#### Ballistic Motion ($p_{air}(t) = p_{ambient}$)
 
+When the presure in the rocket equals the ambient pressure, the rocket undergoes a simple ballistic motion
+```math
+m_{rocket}\frac{dv_{rocket}}{dt} = - m_{rocket}g - \frac{1}{2} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}.
+```
 
 
 
