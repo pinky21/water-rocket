@@ -21,7 +21,7 @@ Newton's second law states that in the absence of external forces, the total mom
 ```math
 \frac{d\mathbf{P}}{dt} = 0
 ```
-We can split the total momentum into two components, the momentum of the rocket system $\mathbf{P}_{rocket}$ and the momentum of the water which left the rocket $\mathbf{P}_{water}$. Hence the equation above can be written as
+We can split the total momentum into two components, the momentum of the rocket system ```math\mathbf{P}_{rocket}``` and the momentum of the water which left the rocket $\mathbf{P}_{water}$. Hence the equation above can be written as
 ```math
 \frac{d\mathbf{P}_{rocket}}{dt}+\frac{d\mathbf{P}_{water}}{dt} = 0
 ```
