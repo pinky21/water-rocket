@@ -36,11 +36,10 @@ The momentum of the water system inceases as the rocket is loosing its mass and 
 ```
 Combining those two eqautions results in the well-known rocket equation
 ```math
-\frac{dm_{rocket}}{dt}v_{rocket}+m_{rocket}\frac{dv_{rocket}}{dt} + \frac{dm_{rocket}}{dt}(v_{expel}-v_{rocket})=0
+m_{rocket}\frac{dv_{rocket}}{dt} + \frac{dm_{rocket}}{dt}v_{expel}=0
 ```
-
-
-The equation of motion for the rocket, assuming all forces are directed along the z-axis:
+where the first term describes the acceleration of the rocket and the second term can be interpreted as the thrust force acting on the rocket.
+Extending the eqaution above and consigering also external forces results in the following balance of forces:
 ```math
 F_{rocket} = F_{trust} + F_{gravitation} + F_{drag},
 ```
