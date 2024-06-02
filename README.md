@@ -17,6 +17,17 @@ V_{air}(t)=A_{rocket}(l_{rocket}-h_{water}(t))
 
 #### Equation of Motion
 
+Newton's second law states that in the absence of external forces, the total momentum is conserved:
+```math
+\frac{dP}{dt} = 0
+```
+We can split the total momentum into two components, the momentum of the rocket system $P_{rocket}$ and the momentum of the water which left the rocket $P_{water}$. Hence the equation above can be written as
+```math
+\frac{dP_{rocket}}{dt}+\frac{dP_{water}}{dt} = 0
+```
+
+
+
 The equation of motion for the rocket, assuming all forces are directed along the z-axis:
 ```math
 F_{rocket} = F_{trust} + F_{gravitation} + F_{drag},
