@@ -29,9 +29,12 @@ In the labrotory frame, the time derivative of the momentum of the rocket system
 ```math
 \frac{dP_{rocket}}{dt} = \frac{dm_{rocket}}{dt}v_{rocket}+m_{rocket}\frac{dv_{rocket}}{dt}
 ```
+Hence, the momentum of the rocket may increase over time with inceasing mass or inceasing velocity. 
+The momentum of the water system inceases as the rocket is loosing mass and expelling the exaust with velocity $v_{expel}$ measured relative to the rockets velocity v_{rocket}:
 ```math
-P_{water} = m_{rocket}(t)v_{rocket}(t)
+\frac{dP_{water}}{dt} = \frac{dm_{rocket}}{dt}(v_{expel}-v_{rocket})
 ```
+
 
 The equation of motion for the rocket, assuming all forces are directed along the z-axis:
 ```math
