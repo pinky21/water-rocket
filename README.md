@@ -155,7 +155,7 @@ a differential equation for the air density
 ```
 and the equation of motion of the rocket is a bit different
 ```math
-\frac{dv_{rocket}}{dt} = A_{expell} \rho_{air} \frac{v_{expell}^2(t)}{m_{rocket}(t)} - g - \frac{1}{2} \frac{\rho_{ambient}}{m_{rocket}(t)} v_{rocket}^2(t) C_D A_{rocket}\frac{v_{rocket}(t)}{|v_{rocket}(t)|}.
+\frac{dv_{rocket}}{dt} = A_{expell} \rho_{air}(t) \frac{v_{expell}^2(t)}{m_{rocket}(t)} - g - \frac{1}{2} \frac{\rho_{ambient}}{m_{rocket}(t)} v_{rocket}^2(t) C_D A_{rocket}\frac{v_{rocket}(t)}{|v_{rocket}(t)|}.
 ```
 
 Hence, the calculation scheme is the following:
