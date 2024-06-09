@@ -176,5 +176,20 @@ When the presure in the rocket equals the ambient pressure, the rocket undergoes
 m_{rocket}\frac{dv_{rocket}}{dt} = - m_{rocket}g - \frac{1}{2} \rho_{ambient} v_{rocket}^2 C_D A_{rocket}\frac{v_{rocket}}{|v_{rocket}|}.
 ```
 
+## Limitations
 
+Many ...
 
+- rocket is basically reduced to a point model
+- no tumbling
+- "cylindical" shape of rocket
+- laminar flow
+- air = ideal gas
+- viscosity and friction of water neglected
+- ...
+
+## Plots
+
+![Trajectory of simple 1L water rocket.](trajectory.png)
+
+![Maximum height reached for different air pressures and filling levels of water.](max_heights.png)
