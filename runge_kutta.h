@@ -98,7 +98,7 @@ void rk_driver(std::vector<double>& y,
   double err_max, h, h_temp, x_new;
   std::vector<double> y_err(n_var);
   std::vector<double> y_result(n_var);
-  h = h_try; // Set stepsize to the initial trial value.
+  h = h_try;
   
   while(true) {
     rk45_cashkarp(y, n_var, *x, h, y_result, y_err, dydx);
@@ -106,13 +106,12 @@ void rk_driver(std::vector<double>& y,
     for (int i = 0; i < n_var; i++) {
       err_max = fmax(err_max, fabs(y_err[i] / yscal[i]));
     }
-    err_max /= eps; // Scale relative to required tolerance.
+    err_max /= eps; // Scale error relative to required tolerance.
     if (err_max <= 1.0) {
-      break; // Step succeeded. Compute size of next step.
+      break; // Error OK, step succeeded. Continue to compute size of next step.
     }
     h_temp = SAFETY * h * pow(err_max, STEPSHRINK);
-    // Truncation error too large, reduce stepsize.
-    // But not more than a factor of 10.
+    // If error is too large, reduce stepsize, but not more than a factor of 10.
     if (h >= 0.0) {
       h = fmax(h_temp, 0.1 * h);
     }
@@ -121,11 +120,12 @@ void rk_driver(std::vector<double>& y,
     }
     x_new = (*x) + h;
     if (x_new == *x) {
-      std::cerr << "stepsize underflow in rk_driver" << std::endl;
+      std::cerr << "Stepsize underflow in runge_kutta::rk_driver" << std::endl;
       exit(1);
     }
   }
 
+  // Calculate stepsize for next step, update independent variable x and dependent variables y
   *h_next = SAFETY * h * fmin(pow(err_max, STEPGROW), 5.0);
   *x += h;
   for (int i = 0; i < n_var; i++) {
