@@ -193,7 +193,8 @@ Many!
 - ...
 
 ## Plots
-
+Trajectory of simple 1L water rocket.
 ![Trajectory of simple 1L water rocket.](trajectory.png)
 
+Maximum height reached for different air pressures and filling levels of water.
 ![Maximum height reached for different air pressures and filling levels of water.](max_heights.png)
