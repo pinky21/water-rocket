@@ -8,15 +8,15 @@
 namespace runge_kutta {
 
 static const double SAFETY = 0.9;
-static const double EXPSHRINK = -0.25;
-static const double EXPGROW = -0.2;
+static const double STEPSHRINK = -0.25;
+static const double STEPGROW = -0.2;
 
 void rk45_cashkarp(const std::vector<double>& y,
             const int n,
             const double x,
             const double h,
-            std::vector<double>& yout,
-            std::vector<double>& yerr,
+            std::vector<double>& y_out,
+            std::vector<double>& y_err,
             void (*dxdy)(const double, const std::vector<double>&, std::vector<double>&)) {
 
   static const double a2 = 0.2;
@@ -79,10 +79,10 @@ void rk45_cashkarp(const std::vector<double>& y,
   }
   (*dxdy)(x + a6 * h, ytemp, ak6);
   for (int i = 0; i < n; i++) {
-    yout[i] = y[i] + h * (c1 * dydx[i] + c3 * ak3[i] + c4 * ak4[i] + c6 * ak6[i]);
+    y_out[i] = y[i] + h * (c1 * dydx[i] + c3 * ak3[i] + c4 * ak4[i] + c6 * ak6[i]);
   }
   for (int i = 0; i < n; i++) {
-    yerr[i] = h * (dc1 * dydx[i] + dc3 * ak3[i] + dc4 * ak4[i] + dc5 * ak5[i] + dc6 * ak6[i]);
+    y_err[i] = h * (dc1 * dydx[i] + dc3 * ak3[i] + dc4 * ak4[i] + dc5 * ak5[i] + dc6 * ak6[i]);
   }
 }
 
@@ -95,41 +95,41 @@ void rk_driver(std::vector<double>& y,
           double *h_next,
           void (*dydx)(double, const std::vector<double>&, std::vector<double>&)) {
 
-  double errmax, h, htemp, xnew;
-  std::vector<double> yerr(n);
-  std::vector<double> yresult(n);
+  double err_max, h, h_temp, x_new;
+  std::vector<double> y_err(n);
+  std::vector<double> y_result(n);
   h = h_try; // Set stepsize to the initial trial value.
   
   while(true) {
-    rk45_cashkarp(y, n, *x, h, yresult, yerr, dydx);
-    errmax = 0.0;
+    rk45_cashkarp(y, n, *x, h, y_result, y_err, dydx);
+    err_max = 0.0;
     for (int i = 0; i < n; i++) {
-      errmax = fmax(errmax, fabs(yerr[i] / yscal[i]));
+      err_max = fmax(err_max, fabs(y_err[i] / yscal[i]));
     }
-    errmax /= eps; // Scale relative to required tolerance.
-    if (errmax <= 1.0) {
+    err_max /= eps; // Scale relative to required tolerance.
+    if (err_max <= 1.0) {
       break; // Step succeeded. Compute size of next step.
     }
-    htemp = SAFETY * h * pow(errmax, EXPSHRINK);
+    h_temp = SAFETY * h * pow(err_max, STEPSHRINK);
     // Truncation error too large, reduce stepsize.
     // But not more than a factor of 10.
     if (h >= 0.0) {
-      h = fmax(htemp, 0.1 * h);
+      h = fmax(h_temp, 0.1 * h);
     }
     else {
-      h = fmin(htemp, 0.1 * h);
+      h = fmin(h_temp, 0.1 * h);
     }
-    xnew = (*x) + h;
-    if (xnew == *x) {
-      std::cerr << "stepsize underflow in rk_driver\n";
+    x_new = (*x) + h;
+    if (x_new == *x) {
+      std::cerr << "stepsize underflow in rk_driver" << std::endl;
       exit(1);
     }
   }
 
-  *h_next = SAFETY * h * fmin(pow(errmax, EXPGROW), 5.0);
+  *h_next = SAFETY * h * fmin(pow(err_max, STEPGROW), 5.0);
   *x += h;
   for (int i = 0; i < n; i++) {
-    y[i] = yresult[i];
+    y[i] = y_result[i];
   }
 }
 
