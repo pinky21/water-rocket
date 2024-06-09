@@ -123,7 +123,7 @@ The calculations above are repeated until the conditions $p_{air}(t) > p_{ambien
 
 #### Air Thrust ($p_{air} > p_{ambient}$, $h_{water} = 0$)
 
-If the water level is zero either because all water is already expelled or because simply no water was filled into the rocket, we can still have a thrust force due to the higher air pressure inside the rocket than outside. Hence the equation of motion is the same as in the case above, only the equations for the medium in the rocket are somewhat different.
+If the water level is zero either because all water is already expelled or because simply no water was filled into the rocket, we can still have a thrust force due to the higher air pressure inside the rocket than outside.
 
 Recalling the thrust force, $F_{thrust}=-v_{expel}\frac{dm_{rocket}}{dt}$, we need an equation for the mass change of the rocket.
 
@@ -157,7 +157,7 @@ a differential equation for the air density
 ```math
 \frac{d\rho_{air}}{dt}= \rho_{air}v_{expel}\frac{A_{expel}}{A_{rocket}L_{rocket}}
 ```
-and the equation of motion of the rocket is a bit different
+and the equation of motion of the rocket
 ```math
 \frac{dv_{rocket}}{dt} = A_{expell} \rho_{air}(t) \frac{v_{expell}^2(t)}{m_{rocket}(t)} - g - \frac{1}{2} \frac{\rho_{ambient}}{m_{rocket}(t)} v_{rocket}^2(t) C_D A_{rocket}\frac{v_{rocket}(t)}{|v_{rocket}(t)|}.
 ```
