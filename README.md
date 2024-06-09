@@ -182,7 +182,7 @@ m_{rocket}\frac{dv_{rocket}}{dt} = - m_{rocket}g - \frac{1}{2} \rho_{ambient} v_
 
 ## Limitations
 
-Many ...
+Many!
 
 - rocket is basically reduced to a point model
 - no tumbling
