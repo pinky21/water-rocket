@@ -1,8 +1,8 @@
 # Water Rocket
 
-Simple project solving the differtial equations for a water rocket using a Cash-Karp Runge-Kutta solver.  
+Simple project solving some differtial equations for a water rocket using a Cash-Karp Runge-Kutta solver.  
 
-This program comes with ABSOLUTELY NO WARRANTY.
+This program comes with ABSOLUTELY NO WARRANTY and serves only as toy model.
 
 ## Theory
 
