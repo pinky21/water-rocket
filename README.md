@@ -193,7 +193,7 @@ Many!
 - ...
 
 ## Plots
-Trajectory of simple 1L water rocket.
+Example of a trajectory of a simple 1L water rocket.
 ![Trajectory of simple 1L water rocket.](trajectory.png)
 
 Maximum height reached for different air pressures and filling levels of water.
