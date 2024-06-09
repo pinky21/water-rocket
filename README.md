@@ -39,7 +39,8 @@ Combining those two eqautions results in the well-known rocket equation
 m_{rocket}\frac{dv_{rocket}}{dt} + \frac{dm_{rocket}}{dt}v_{expel}=0
 ```
 where the first term describes the acceleration of the rocket and the second term can be interpreted as the thrust force acting on the rocket.
-Extending the eqaution above and consigering also external forces results in the following balance of forces:
+
+Extending the eqaution above and considering also external forces results in the following balance of forces:
 ```math
 F_{rocket} = F_{trust} + F_{gravitation} + F_{drag},
 ```
