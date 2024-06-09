@@ -135,7 +135,7 @@ Recalling the integral version of the continuity equation, $\int_V \frac{\partia
 ```math
 V_{rocket}\frac{d\rho_{air}}{dt}= \rho_{air}v_{expel}A_{expel}
 ```
-Similar as before, we use the energy consevation (Bernoulli) to relate the pressure to the expelling velocity
+Similar as before, we use the energy consevation (Bernoulli eq.) to relate the pressure to the expelling velocity
 ```math
 p_{air}=p_{ambient}+\frac{1}{2}\rho_{air}v_{expel}^2
 ```
@@ -149,7 +149,7 @@ p_{air}=\rho_{air}R_{spec,air}T_{air},
 ```
 where $R_{spec,air}$ is the specific gas constant of air and $T_{air}$ the air temperature, which we assume to be equal the ambient temperature $T_{air}=T_{ambient}$.
 
-In sumary, we can again obtain an expression for the expelling velocity:
+In summary, we can again obtain an expression for the expelling velocity:
 ```math
 v_{expel}(t) = \sqrt{\frac{2}{\rho_{air}(t)}(\rho_{air}(t)R_{spec,air}T_{air}-p_{ambient}) }
 ```
