@@ -12,7 +12,7 @@ static const double STEPSHRINK = -0.25;
 static const double STEPGROW = -0.2;
 
 void rk45_cashkarp(const std::vector<double>& y,
-            const int n,
+            const int n_var,
             const double x,
             const double h,
             std::vector<double>& y_out,
@@ -49,45 +49,45 @@ void rk45_cashkarp(const std::vector<double>& y,
   static const double dc5 = -277.00 / 14336.0;
   static const double dc6 = c6 - 0.25;
 
-  std::vector<double> ak2(n);
-  std::vector<double> ak3(n);
-  std::vector<double> ak4(n);
-  std::vector<double> ak5(n);
-  std::vector<double> ak6(n);
-  std::vector<double> dydx(n);
-  std::vector<double> ytemp(n);
+  std::vector<double> ak2(n_var);
+  std::vector<double> ak3(n_var);
+  std::vector<double> ak4(n_var);
+  std::vector<double> ak5(n_var);
+  std::vector<double> ak6(n_var);
+  std::vector<double> dydx(n_var);
+  std::vector<double> y_temp(n_var);
 
   (*dxdy)(x, y, dydx);
-  for (int i = 0; i < n; i++) {
-    ytemp[i] = y[i] + b21 * h * dydx[i];
+  for (int i = 0; i < n_var; i++) {
+    y_temp[i] = y[i] + b21 * h * dydx[i];
   }
-  (*dxdy)(x + a2 * h, ytemp, ak2);
-  for (int i = 0; i < n; i++) {
-    ytemp[i] = y[i] + h * (b31 * dydx[i] + b32 * ak2[i]);
+  (*dxdy)(x + a2 * h, y_temp, ak2);
+  for (int i = 0; i < n_var; i++) {
+    y_temp[i] = y[i] + h * (b31 * dydx[i] + b32 * ak2[i]);
   }
-  (*dxdy)(x + a3 * h, ytemp, ak3);
-  for (int i = 0; i < n; i++) {
-    ytemp[i] = y[i] + h * (b41 * dydx[i] + b42 * ak2[i] + b43 * ak3[i]);
+  (*dxdy)(x + a3 * h, y_temp, ak3);
+  for (int i = 0; i < n_var; i++) {
+    y_temp[i] = y[i] + h * (b41 * dydx[i] + b42 * ak2[i] + b43 * ak3[i]);
   }
-  (*dxdy)(x + a4 * h, ytemp, ak4);
-  for (int i = 0; i < n; i++) {
-    ytemp[i] = y[i] + h * (b51 * dydx[i] + b52 * ak2[i] + b53 * ak3[i] + b54 * ak4[i]);
+  (*dxdy)(x + a4 * h, y_temp, ak4);
+  for (int i = 0; i < n_var; i++) {
+    y_temp[i] = y[i] + h * (b51 * dydx[i] + b52 * ak2[i] + b53 * ak3[i] + b54 * ak4[i]);
   }
-  (*dxdy)(x + a5 * h, ytemp, ak5);
-  for (int i = 0; i < n; i++) {
-    ytemp[i] = y[i] + h * (b61 * dydx[i] + b62 * ak2[i] + b63 * ak3[i] + b64 * ak4[i] + b65 * ak5[i]);
+  (*dxdy)(x + a5 * h, y_temp, ak5);
+  for (int i = 0; i < n_var; i++) {
+    y_temp[i] = y[i] + h * (b61 * dydx[i] + b62 * ak2[i] + b63 * ak3[i] + b64 * ak4[i] + b65 * ak5[i]);
   }
-  (*dxdy)(x + a6 * h, ytemp, ak6);
-  for (int i = 0; i < n; i++) {
+  (*dxdy)(x + a6 * h, y_temp, ak6);
+  for (int i = 0; i < n_var; i++) {
     y_out[i] = y[i] + h * (c1 * dydx[i] + c3 * ak3[i] + c4 * ak4[i] + c6 * ak6[i]);
   }
-  for (int i = 0; i < n; i++) {
+  for (int i = 0; i < n_var; i++) {
     y_err[i] = h * (dc1 * dydx[i] + dc3 * ak3[i] + dc4 * ak4[i] + dc5 * ak5[i] + dc6 * ak6[i]);
   }
 }
 
 void rk_driver(std::vector<double>& y,
-          int n,
+          int n_var,
           double *x,
           double h_try,
           double eps,
@@ -96,14 +96,14 @@ void rk_driver(std::vector<double>& y,
           void (*dydx)(double, const std::vector<double>&, std::vector<double>&)) {
 
   double err_max, h, h_temp, x_new;
-  std::vector<double> y_err(n);
-  std::vector<double> y_result(n);
+  std::vector<double> y_err(n_var);
+  std::vector<double> y_result(n_var);
   h = h_try; // Set stepsize to the initial trial value.
   
   while(true) {
-    rk45_cashkarp(y, n, *x, h, y_result, y_err, dydx);
+    rk45_cashkarp(y, n_var, *x, h, y_result, y_err, dydx);
     err_max = 0.0;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n_var; i++) {
       err_max = fmax(err_max, fabs(y_err[i] / yscal[i]));
     }
     err_max /= eps; // Scale relative to required tolerance.
@@ -128,7 +128,7 @@ void rk_driver(std::vector<double>& y,
 
   *h_next = SAFETY * h * fmin(pow(err_max, STEPGROW), 5.0);
   *x += h;
-  for (int i = 0; i < n; i++) {
+  for (int i = 0; i < n_var; i++) {
     y[i] = y_result[i];
   }
 }
